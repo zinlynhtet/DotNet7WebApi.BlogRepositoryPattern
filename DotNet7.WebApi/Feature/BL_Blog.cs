@@ -11,9 +11,9 @@ namespace DotNet7.WebApi.Feature
             _dABlog = dABlog;
         }
 
-        public async Task<BlogListResponseModel> GetBlogs()
-        {
-            return await _dABlog.BlogList();
-        }
+        //public async Task<BlogListResponseModel> GetBlogs()
+        //{
+        //    return await _dABlog.BlogList();
+        //}
     }
 }
