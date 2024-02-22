@@ -12,7 +12,7 @@ namespace DotNet7.WebApi.Feature
     public class BlogController : Controller
     {
         private readonly IBlogRepository _blogRepository;
-        private readonly ILogger <BlogController> _logger;
+        private readonly ILogger<BlogController> _logger;
 
         public BlogController(IBlogRepository blogRepository, ILogger<BlogController> logger)
         {
@@ -35,11 +35,19 @@ namespace DotNet7.WebApi.Feature
             }
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> BlogCreate(BlogRequestModel requestModel)
-        //{
-        //    var result = await _blogRepository.BlogCreate(requestModel);
-        //    return Ok(result);
-        //}
+        [HttpPost]
+        public async Task<IActionResult> BlogCreate(TblBlog requestModel)
+        {
+            try
+            {
+                var result = await _blogRepository.BlogCreate(requestModel);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex.ToString());
+                return BadRequest("Something went wrong.");
+            }
+        }
     }
 }
