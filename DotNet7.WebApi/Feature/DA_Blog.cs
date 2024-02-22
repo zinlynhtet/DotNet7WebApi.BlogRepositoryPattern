@@ -13,24 +13,24 @@ namespace DotNet7.WebApi.Feature
         {
             _context = context;
         }
-        public async Task<BlogListResponseModel> BlogList()
-        {
-            var model = new BlogListResponseModel();
-            var blogs = await _context.TblBlogs
-                .AsNoTracking()
-                .Select(x => new TblBlog()
-                {
-                    BlogId = x.BlogId,
-                    Id = x.Id,
-                    BlogTitle = x.BlogTitle,
-                    BlogAuthor = x.BlogAuthor,
-                    BlogContent = x.BlogContent,
-                })
-                .ToListAsync();
+        //public async Task<BlogListResponseModel> BlogList()
+        //{
+        //    var model = new BlogListResponseModel();
+        //    var blogs = await _context.TblBlogs
+        //        .AsNoTracking()
+        //        .Select(x => new TblBlog()
+        //        {
+        //            BlogId = x.BlogId,
+        //            Id = x.Id,
+        //            BlogTitle = x.BlogTitle,
+        //            BlogAuthor = x.BlogAuthor,
+        //            BlogContent = x.BlogContent,
+        //        })
+        //        .ToListAsync();
 
-            model.Blogs = blogs;
-            return model;
-        }
+        //    model.Blogs = blogs;
+        //    return model;
+        //}
         public async Task<BlogResponseModel> BlogCreate(BlogRequestModel requestModel)
         {
             var model = new BlogResponseModel();
