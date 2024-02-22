@@ -5,7 +5,7 @@ namespace DotNet7.WebApi.Feature
 {
     public interface IBlogRepository
     {
-        //Task BlogCreate(BlogRequestModel requestModel);
+        Task<TblBlog> BlogCreate(TblBlog requestModel);
         Task<IEnumerable<TblBlog>> GetAllBlogs();
 
     }
