@@ -16,8 +16,9 @@ namespace DotNet7.WebApi.Feature
         public async Task<TblBlog> BlogCreate(TblBlog requestModel)
         {
             requestModel.Id = Guid.NewGuid().ToString();
-            var blog = await _context.TblBlogs.AddAsync(requestModel);
-            return blog.Entity;
+            await _context.TblBlogs.AddAsync(requestModel);
+            var blog = await _context.SaveChangesAsync();
+            return requestModel;
         }
 
         public async Task<IEnumerable<TblBlog>> GetAllBlogs()
