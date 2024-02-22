@@ -12,14 +12,18 @@ namespace DotNet7.WebApi.Feature
         {
             _context = context;
         }
+
+        public async Task<TblBlog> BlogCreate(TblBlog requestModel)
+        {
+            requestModel.Id = Guid.NewGuid().ToString();
+            var blog = await _context.TblBlogs.AddAsync(requestModel);
+            return blog.Entity;
+        }
+
         public async Task<IEnumerable<TblBlog>> GetAllBlogs()
         {
             return await _context.TblBlogs.ToListAsync();
         }
-        //public async Task BlogCreate(BlogRequestModel requestModel)
-        //{
 
-        //    return await _context.TblBlogs.AddAsync(requestModel);
-        //}
     }
 }
