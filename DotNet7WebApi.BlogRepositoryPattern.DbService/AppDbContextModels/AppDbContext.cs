@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace DotNet7WebApi.BlogRepositoryPattern.AppDbContextModels;
+namespace DotNet7WebApi.BlogRepositoryPattern.DbService.AppDbContextModels;
 
 public partial class AppDbContext : DbContext
 {

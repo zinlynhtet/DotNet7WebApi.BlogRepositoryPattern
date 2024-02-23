@@ -1,8 +1,4 @@
-using DotNet7WebApi.BlogRepositoryPattern.AppDbContextModels;
-using DotNet7WebApi.BlogRepositoryPattern.Feature;
-using Microsoft.EntityFrameworkCore;
-using Serilog;
-
+using DotNet7WebApi.BlogRepositoryPattern.Features.Blog;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()

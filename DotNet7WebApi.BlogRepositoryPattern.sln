@@ -5,6 +5,14 @@ VisualStudioVersion = 17.9.34511.98
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet7WebApi.BlogRepositoryPattern", "DotNet7WebApi.BlogRepositoryPattern\DotNet7WebApi.BlogRepositoryPattern.csproj", "{B6B61645-353D-443F-96DD-11E541850DEE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{79A68827-FC3D-4855-B1F2-80BF7CBF8DAC}"
+	ProjectSection(SolutionItems) = preProject
+		blogrepository.sql = blogrepository.sql
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet7WebApi.BlogRepositoryPattern.DbService", "DotNet7WebApi.BlogRepositoryPattern.DbService\DotNet7WebApi.BlogRepositoryPattern.DbService.csproj", "{D9F4F0BC-7116-4C73-A55C-518296C0DE68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,10 @@ Global
 		{B6B61645-353D-443F-96DD-11E541850DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6B61645-353D-443F-96DD-11E541850DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6B61645-353D-443F-96DD-11E541850DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F4F0BC-7116-4C73-A55C-518296C0DE68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F4F0BC-7116-4C73-A55C-518296C0DE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F4F0BC-7116-4C73-A55C-518296C0DE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F4F0BC-7116-4C73-A55C-518296C0DE68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

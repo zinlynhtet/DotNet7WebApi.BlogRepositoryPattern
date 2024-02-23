@@ -1,4 +1,4 @@
-﻿namespace DotNet7WebApi.BlogRepositoryPattern.AppDbContextModels;
+﻿namespace DotNet7WebApi.BlogRepositoryPattern.DbService.AppDbContextModels;
 
 public partial class BlogDataModel
 {
