@@ -1,5 +1,5 @@
-using DotNet7.WebApi.AppDbContextModels;
-using DotNet7.WebApi.Feature;
+using DotNet7WebApi.BlogRepositoryPattern.AppDbContextModels;
+using DotNet7WebApi.BlogRepositoryPattern.Feature;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -24,8 +24,6 @@ try
         options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
     }, ServiceLifetime.Transient, ServiceLifetime.Transient);
 
-    builder.Services.AddScoped<DA_Blog>();
-    builder.Services.AddScoped<BL_Blog>();
     builder.Services.AddScoped<IBlogRepository, BlogRepository>();
     var app = builder.Build();
 
