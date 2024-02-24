@@ -1,17 +1,23 @@
-﻿What is repository pattern?
+<h2>
+﻿What is repository pattern?	
+</h2>
 The Repository Pattern is a design pattern commonly used in software development, including ASP.NET Core applications,
 to abstract the data access logic and provide a clean separation between the application's business logic and the underlying data storage mechanisms.
 It's a way to centralize and organize the data access code in a dedicated layer, making the codebase more maintainable, scalable, and testable.
 
-You can read more information about this pattern [here](https://code-maze.com/net-core-web-development-part4/).
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Ghost.png" alt="Ghost" width="25" height="25" />
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Ghost.png" alt="Ghost" width="25" height="25" />
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Ghost.png" alt="Ghost" width="25" height="25" />
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Ghost.png" alt="Ghost" width="25" height="25" />
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Ghost.png" alt="Ghost" width="25" height="25" />
+﻿
 
-Code first မဟုတ်ပဲ Db first command ,Scaffold db command line run ပြီး DbContext Model ဆောက်ထားတာဖြစ်ပါတယ်။
+>Code first မဟုတ်ပဲ Db first command ,Scaffold db command line run ပြီး DbContext Model ဆောက်ထားတာဖြစ်ပါတယ်။
 Db services ကို  Solution Layer မှာ Class Library တစ်ခုသုံးပြီး Project Reference ပြန်ယူကာအသုံးပြုထားပါတယ်။ 
 ရည်ရွယ်ချက်ကတော့ Scaffold command ပြန် run ဖို့လိုလာတိုင်း အလွယ်တကူ run လို့ရအောင်ပါ။
 Api test လုပ်ဖို့ဆိုရင် MSSql db query ကို အရင်ဆုံး runပေးရပါမယ်။ 
 ပြီးလျှင် မိမိ computer ရဲ့ Db Connection String ကို appsetting.jsonမှာပြောင်းပေးရပါမယ်။ 
-Now you're good to go on.
-
+Now, you're good to go on.
 To clone the git repository, run thi command in cmd
 ```
 cd your folder path
@@ -45,10 +51,10 @@ INSERT [dbo].[Tbl_Blogs] ([BlogId], [Id], [BlogTitle], [BlogAuthor], [BlogConten
 INSERT [dbo].[Tbl_Blogs] ([BlogId], [Id], [BlogTitle], [BlogAuthor], [BlogContent]) VALUES (4, N'055fae1d-62aa-4678-abd9-361d8fa322a1', N'hello', N'hello', N'hello')
 SET IDENTITY_INSERT [dbo].[Tbl_Blogs] OFF
 GO
-
 ```
 Scaffold command line 
 ```bash
 dotnet ef dbcontext scaffold "Server=.;Database=TestDb;User Id=sa;Password=sasa@123;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -o AppDbContextModels -c AppDbContext -t BlogDataModel -f
 
 ```
+You can read more information about this pattern [here](https://code-maze.com/net-core-web-development-part4/).
