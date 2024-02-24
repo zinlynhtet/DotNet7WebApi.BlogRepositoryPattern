@@ -18,12 +18,13 @@ Db services ကို  Solution Layer မှာ Class Library တစ်ခုသ
 Api test လုပ်ဖို့ဆိုရင် MSSql db query ကို အရင်ဆုံး runပေးရပါမယ်။ 
 ပြီးလျှင် မိမိ computer ရဲ့ Db Connection String ကို appsetting.jsonမှာပြောင်းပေးရပါမယ်။ 
 Now, you're good to go on.
-To clone the git repository, run thi command in cmd
+
+>To clone the git repository, run this command in cmd
 ```
 cd your folder path
 git clone https://github.com/zinlynhtet/DotNet7WebApi.BlogRepositoryPattern.git
 ```
-For Mssql database, run this query
+>For Mssql database, run this query
 ```sql
 USE [TestDb]
 GO
@@ -52,7 +53,7 @@ INSERT [dbo].[Tbl_Blogs] ([BlogId], [Id], [BlogTitle], [BlogAuthor], [BlogConten
 SET IDENTITY_INSERT [dbo].[Tbl_Blogs] OFF
 GO
 ```
-Scaffold command line 
+>Scaffold command line 
 ```bash
 dotnet ef dbcontext scaffold "Server=.;Database=TestDb;User Id=sa;Password=sasa@123;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -o AppDbContextModels -c AppDbContext -t BlogDataModel -f
 
